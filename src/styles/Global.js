@@ -12,9 +12,10 @@ const GlobalStyle = createGlobalStyle`
 }
 
 body {
-  background: #000 url(${Background}) no-repeat;
+  background: #181818 url(${Background}) no-repeat;
   background-size: cover;
   font-family: 'Montserrat', sans-serif;
+  text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
