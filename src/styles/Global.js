@@ -1,6 +1,6 @@
 import { createGlobalStyle } from "styled-components";
 import Background from "../assets/background.jpg";
-
+import "rc-slider/assets/index.css";
 const GlobalStyle = createGlobalStyle`
 @import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
 

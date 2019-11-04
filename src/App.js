@@ -1,13 +1,19 @@
-import React, { Fragment } from "react";
+import React from "react";
 import GlobalStyle from "./styles/Global";
 import Sidebar from "./components/Sidebar";
+import Player from "./components/Player";
+import { Wrapper, Container } from "./styles/Components";
 
 function App() {
   return (
-    <Fragment>
-      <Sidebar />
+    <Wrapper>
+      <Container>
+        <Sidebar />
+      </Container>
+
+      <Player />
       <GlobalStyle />
-    </Fragment>
+    </Wrapper>
   );
 }
 
