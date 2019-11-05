@@ -10,3 +10,10 @@ export const Container = styled.div`
   flex: 1;
   display: flex;
 `;
+
+export const Content = styled.div`
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  padding: 0 20px;
+`;
