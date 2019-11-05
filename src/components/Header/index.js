@@ -14,7 +14,7 @@ export default class Header extends Component {
             src="https://avatars2.githubusercontent.com/u/26010080?v=4"
             alt="avatar"
           />
-          Valdir Coxev
+          Juliano Barbosa
         </User>
       </Container>
     );

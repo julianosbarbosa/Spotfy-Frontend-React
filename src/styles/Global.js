@@ -1,6 +1,6 @@
 import { createGlobalStyle } from "styled-components";
-import Background from "../assets/background.jpg";
 import "rc-slider/assets/index.css";
+
 const GlobalStyle = createGlobalStyle`
 @import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
 
@@ -12,9 +12,9 @@ const GlobalStyle = createGlobalStyle`
 }
 
 body {
-  background: #181818 url(${Background}) no-repeat;
-  background-size: cover;
+  background: #181818;
   font-family: 'Montserrat', sans-serif;
+  color: #fff;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
