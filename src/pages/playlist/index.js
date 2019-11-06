@@ -3,7 +3,7 @@ import React, { Component } from "react";
 import { Container, Header, SongLists } from "./styles";
 import ClockIcon from "../../assets/clock.svg";
 import PlusIcon from "../../assets/plus.svg";
-
+console.tron.log("teste");
 export default class Playlist extends Component {
   render() {
     return (
