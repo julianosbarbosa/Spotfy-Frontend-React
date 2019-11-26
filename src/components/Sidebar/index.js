@@ -1,8 +1,16 @@
 import React, { Component } from "react";
+import { connect } from "react-redux";
+import { bindActionCreators } from "redux";
+import { Creators as PlaylistsActions } from "../../store/ducks/playists";
+import { Link } from "react-router-dom";
 import AddPlaylistIcon from "../../assets/add_playlist.svg";
 import { Container, NewPlaylist, Nav } from "./styles";
 
-export default class Sidebar extends Component {
+class Sidebar extends Component {
+  componentDidMount() {
+    this.props.getPlaylistsRequest();
+  }
+
   render() {
     return (
       <Container>
@@ -51,9 +59,11 @@ export default class Sidebar extends Component {
             <li>
               <span>PLAYLISTS</span>
             </li>
-            <li>
-              <a href="http://">Melhores do Rock</a>
-            </li>
+            {this.props.playlists.data.map(playlist => (
+              <li key={playlist.id}>
+                <Link to={`playlists/${playlist.id}`}>{playlist.title}</Link>
+              </li>
+            ))}
           </Nav>
         </div>
         <NewPlaylist>
@@ -64,3 +74,12 @@ export default class Sidebar extends Component {
     );
   }
 }
+
+const mapStateToProps = state => ({
+  playlists: state.playlists
+});
+
+const mapDispatchToProps = dispatch =>
+  bindActionCreators(PlaylistsActions, dispatch);
+
+export default connect(mapStateToProps, mapDispatchToProps)(Sidebar);
