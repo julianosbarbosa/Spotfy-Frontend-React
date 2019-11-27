@@ -3,6 +3,7 @@ import { connect } from "react-redux";
 import { bindActionCreators } from "redux";
 import { Creators as PlaylistsActions } from "../../store/ducks/playists";
 import { Container, Title, List, Playlist } from "./styles";
+import Loading from "../../components/Loading";
 
 class Browser extends Component {
   componentDidMount() {
@@ -11,7 +12,7 @@ class Browser extends Component {
   render() {
     return (
       <Container>
-        <Title>Navegar</Title>
+        <Title>Navegar{this.props.playlists.loading && <Loading />}</Title>
         <List>
           {this.props.playlists.data.map(playlist => (
             <Playlist key={playlist.id} to={`playlists/${playlist.id}`}>

@@ -5,7 +5,7 @@ import { Creators as PlaylistsActions } from "../../store/ducks/playists";
 import { Link } from "react-router-dom";
 import AddPlaylistIcon from "../../assets/add_playlist.svg";
 import { Container, NewPlaylist, Nav } from "./styles";
-
+import Loading from "../../components/Loading";
 class Sidebar extends Component {
   componentDidMount() {
     this.props.getPlaylistsRequest();
@@ -58,6 +58,7 @@ class Sidebar extends Component {
           <Nav main>
             <li>
               <span>PLAYLISTS</span>
+              {this.props.playlists.loading && <Loading />}
             </li>
             {this.props.playlists.data.map(playlist => (
               <li key={playlist.id}>

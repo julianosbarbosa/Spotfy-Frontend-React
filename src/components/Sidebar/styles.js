@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { Spiner } from "../../assets/loading.svg";
 
 export const Container = styled.aside`
   height: 100%;
@@ -24,6 +25,9 @@ export const Nav = styled.ul`
   }
 
   li {
+    display: flex;
+    align-items: center;
+    
     a {
       color: inherit;
       text-decoration: none;
@@ -35,12 +39,14 @@ export const Nav = styled.ul`
       }
     }
 
+  
     span {
       font-size: 11px;
       line-height: 22px;
       letter-spacing: 1.11px;
       font-weight: 300;
     }
+
   }
 `;
 
