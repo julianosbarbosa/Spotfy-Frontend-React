@@ -1,5 +1,4 @@
 import styled from "styled-components";
-import { Spiner } from "../../assets/loading.svg";
 
 export const Container = styled.aside`
   height: 100%;
